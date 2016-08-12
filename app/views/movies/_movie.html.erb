@@ -1,0 +1,22 @@
+<div class="movieLists">
+<h2>
+  <strong><%= movie.title %></strong>
+<p>
+  <strong>Review:</strong>
+  <%= movie.review %>
+</p>
+<p>
+  <img src="<%= movie.photo_url %>" width="200px">
+</p>
+
+<%= link_to "upvote", like_movie_path(movie), method: :put %>
+<%= link_to "downvote", dislike_movie_path(movie), method: :put %>
+<%= link_to "unvote", unvote_movie_path(movie), method: :put %>
+<%= movie.score %>
+<p>
+  <%= link_to 'remove movie', [movie.genre, movie],
+              method: :delete,
+              data: { confirm:'Are you sure?'} %>
+</p>
+</h2>
+</div>

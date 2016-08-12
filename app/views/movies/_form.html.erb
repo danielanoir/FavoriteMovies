@@ -1,0 +1,21 @@
+<div class="addMovie">
+<%= form_for([@genre, @genre.movies.build]) do |f| %>
+<h2>Add a Movie:</h2>
+
+  <p class="title">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p class="review">
+    <%= f.label :review %><br>
+    <%= f.text_area :review %>
+  </p>
+  <p class="photo">
+    <%= f.label :photo_url %><br>
+    <%= f.text_area :photo_url %>
+</p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+</div>

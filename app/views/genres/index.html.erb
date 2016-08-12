@@ -1,0 +1,6 @@
+<h1>Good Movies</h1>
+<% @genres.each do |genre| %>
+  <div class="indexGenres">
+    <h2><%= link_to genre.category , genre_path(genre) %></h2>
+  </div>
+<% end %>

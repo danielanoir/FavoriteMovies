@@ -1,0 +1,9 @@
+<p>
+  <h1><%= @genre.category.pluralize.upcase %></h1>
+</p>
+
+<% movies = @genre.movies.sort_by &:score %>
+<% movies.reverse! %>
+<%= render movies %>
+
+<%= render 'movies/form' %>
