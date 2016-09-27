@@ -9,14 +9,14 @@
   <img src="<%= movie.photo_url %>" width="200px">
 </p>
 
-<%= link_to "upvote", like_movie_path(movie), method: :put %>
-<%= link_to "downvote", dislike_movie_path(movie), method: :put %>
+<%= link_to image_tag('https://d30y9cdsu7xlg0.cloudfront.net/png/76060-200.png', size: '30'), like_movie_path(movie), method: :put %>
+<%= link_to image_tag('http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/glossy-black-icons-business/080888-glossy-black-icon-business-thumbs-down.png', size: '30'), dislike_movie_path(movie), method: :put %>
+<%= movie.score %><br>
 <%= link_to "unvote", unvote_movie_path(movie), method: :put %>
-<%= movie.score %>
-<p>
+<!-- <p>
   <%= link_to 'remove movie', [movie.genre, movie],
               method: :delete,
               data: { confirm:'Are you sure?'} %>
-</p>
+</p> -->
 </h2>
 </div>
